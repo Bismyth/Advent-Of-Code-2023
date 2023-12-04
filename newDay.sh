@@ -1,5 +1,5 @@
 #!/bin/bash
-d=$(find Days/* -type d -name '[0-9]*' -printf "%f\n" | sort -V | tail -n 1)
+d=$(find Days/* -maxdepth 1 -type d -name '[0-9]*' -printf "%f\n" | sort -V | tail -n 1)
 
 newPath="Days/$((d + 1))"
 
